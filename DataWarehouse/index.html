@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Warehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"> <img
+                src="https://w7.pngwing.com/pngs/216/509/png-transparent-mongodb-node-js-npm-open-source-model-angularjs-leaf-leaf-logo-grass.png"
+                alt="Logo"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="companias.html">Compañias</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="region.html">Region/Ciudad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <article>
+                <h1>Data Warehouse</h1>
+                <p>Este sitio web te permita realizar operaciones a la base de datos de contactos que incluyen sus datos
+                    personales, sus preferencias, lugar donde trabajan, y lugar donde viven. Podras crear, leer,
+                    actualizar y elimiar contactos.</p>
+                <p>Debes logearte con tu usuario y contaseña para acceder a esta información</p>
+                <button class="btn-abrir-popup" id="btn-abrir-popup">Login</button>
+            </article>
+            <div class="overlay" id="overlay">
+                <div class="form-login" id="form-login">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="far fa-times-circle"></i></a>
+                    <h5>Bienvenido</h5>
+                    <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
+                    <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
+                    <input class="buttons" type="submit" name="" value="Ingresar">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

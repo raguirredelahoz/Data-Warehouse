@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region</title>
+    <link rel="stylesheet" href="region.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"> <img src="https://w7.pngwing.com/pngs/216/509/png-transparent-mongodb-node-js-npm-open-source-model-angularjs-leaf-leaf-logo-grass.png" alt="Logo"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="companias.html">Compañias</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="region.html">Region/Ciudad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+        <section class="form-region"> 
+        <h5>Región</h5>
+        <input class= "controls" type="text" id="name" value="" placeholder="Nombre">
+        <button id="grabar" class="buttons">Agregar Región</button>
+        </section>
+        </div>
+        <div>
+        <section class="form-country"> 
+        <h5>País</h5>
+        <select id= "region">
+        <option disabled selected="">Seleccione una Región</option>   
+         </select>
+        <input class= "controls" type="text" id="name_country" value="" placeholder="Nombre">
+        <button id="grabar2" class="buttons">Agregar Pais</button>
+        </section>
+        </div>
+        <div>
+            <section class="form-city"> 
+                <h5>Ciudad</h5>
+                <select id= "city">
+                <option disabled selected="">Seleccione un País</option>   
+                 </select>
+                <input class= "controls" type="text" id="name_city" value="" placeholder="Nombre">
+                <button id="grabar3" class="buttons">Agregar Ciudad</button>
+                </section>  
+        </div>
+    </main>
+    <script src="api.js" type="text/javascript"></script>
+    <script src="region.js" type="text/javascript"></script>
+    <script src="paises.js" type="text/javascript"></script>
+    <script src="ciudad.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usuarios</title>
+    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="alert.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"> <img src="https://w7.pngwing.com/pngs/216/509/png-transparent-mongodb-node-js-npm-open-source-model-angularjs-leaf-leaf-logo-grass.png" alt="Logo"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="companias.html">Compañias</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="region.html">Region/Ciudad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="usuarios">
+        <section class="form-user"> 
+        <h5>Crear Usuario</h5>
+        <input class= "controls" type="text" id="first_name" value="" placeholder="Nombre">
+        <input class= "controls" type="text" id="last_name" value="" placeholder="Apellido">
+        <input class= "controls" type="text" id="email" value="" placeholder="Email">
+        <div class="select-profile">
+        <select id= "profile">
+        <option disabled selected="">Seleccione un Perfil</option>   
+        <option value="admin">admin</option>
+        <option value="basic">basic</option>
+        </select>
+        </div>
+        <input class= "controls" type="password" id="password" value="" placeholder="Contraseña">
+        <input class= "controls" type="password" value="" placeholder="Repetit Contraseña">
+        <button id="grabar" class="buttons">Grabar</button>
+        </section>
+    </main>
+    <script src="api.js" type="text/javascript"></script>
+    <script src="alert.js" type="text/javascript"></script>
+    <script src="usuarios.js" type="text/javascript"></script>
+</body>
+</html>

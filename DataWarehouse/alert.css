@@ -1,0 +1,44 @@
+.alerts{
+    position: fixed;
+    top: 70px;
+    left: 270px;
+    width: 930px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 15px;
+      display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 35px;
+    grid-template-areas: 'text close';
+        grid-gap:15px;
+        align-items: center;
+        z-index: 6;
+        color: white;
+        text-align: center;
+}
+    .alert-error {
+        background-color: red;
+    }
+    .alert-success{
+        background-color: green;
+    }
+    .closebtn {
+        grid-area: close;
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+       
+      }
+      
+      .closebtn:hover {
+        color: black;
+      }
+    
+      .alert-messeage{
+          grid-area: text;
+      }
+    
