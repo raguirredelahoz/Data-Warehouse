@@ -22,20 +22,21 @@ if (document.getElementById('first_name').dataset.id) {
    method = 'POST';
 }
 
-apidw('usuarios', 'POST', JSON.stringify(body), id
+/*apidw('usuarios', 'POST', JSON.stringify(body), id
 ).then(resultado => {
     console.log(resultado);
 }).catch(error => console.log(error));
-},false)
+},false)*/
 
-/*const mainUsuario = document.getElementById('usuarios')
+const mainUsuario = document.getElementById('usuarios')
+console.log(id)
 apidw('usuarios', method, JSON.stringify(body),id
 ).then(result => {
     console.log(result.resultado.status);
     let alerta = '';
     if (result.resultado.status === 201|| result.resultado.status === 200){
         alerta = alertInformation(201, 'Usuario creado correctamente');
-        document.getElementById('name').removeAttribute('data-id');
+        document.getElementById('first_name').removeAttribute('data-id');
     }else {
         alerta = alertInformation(409, 'Error al crear un Usuario');
     }
@@ -45,4 +46,4 @@ apidw('usuarios', method, JSON.stringify(body),id
     const alertaError = alertInformation(409, 'Error al crear un Usuario');
     mainUsuario.appendChild(alertaError);
 });  
-},false)*/
+},false)

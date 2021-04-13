@@ -20,8 +20,23 @@ server.use(express.json({limit: '100kb' }));
 server.use(express.urlencoded({ extended: true }));
 
 // Endpoint de Usuarios //
-server.get('/usuarios', (req, res) => {
+/*server.get('/usuarios', (req, res) => {
     usuarios.obtenerTodosLosUsuarios().then(usuario => res.status(200).json({usuario}))
+})*/
+
+server.get('/usuarios', (req, res) => {
+    console.log(req.query.offset, req.query.limit, req.query);
+    let params;
+    if (req.query.offset===undefined){
+        params={
+         search:'',
+         offset:0,
+         limit:10
+        }
+    }else{
+      params=req.query
+    }    
+    usuarios.obtenerTodosLosUsuarios(params).then(usuario => res.status(200).json(usuario))
 })
 
 server.post('/usuarios', (req, res) => {
@@ -37,12 +52,12 @@ server.post('/usuarios', (req, res) => {
 server.delete('/usuarios', (req, res) => {
     let eliminar= Object.values(req.body);
      usuarios.eliminarUsuarios(eliminar).then(usuario => {
-     res.status(201).json('Usuario eliminado correctamente')} )
+     res.status(200).json('Usuario eliminado correctamente')} )
 });
 
 server.put('/usuarios/:email', (req, res) => {
     usuarios.actualizarUsuarios(req.body, req.params.email).then(usuario => {
-   res.status(201).json('Usuario actualizado correctamente')} )
+   res.status(200).json('Usuario actualizado correctamente')} )
 });
 
 // Endpoint de Regiones //
